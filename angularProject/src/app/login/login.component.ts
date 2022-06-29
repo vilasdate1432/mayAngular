@@ -10,6 +10,10 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+   console.log('login component');
+   console.log('login components onInit Method');
+
   }
 
 }
