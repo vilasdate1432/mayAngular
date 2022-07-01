@@ -2,4 +2,8 @@
 <button (click)="getData('tom')">button</button>
 
 <button (click)="getData2('sunny')">button</button>
-<input type="text" (keyup.enter)="getData('keyUp')"  >
+<input type="text" #inputTag (keyup.enter)="getData(inputTag.value)" (keyup)="getData2(inputTag.value)" >
+<br>
+<input type="text"  (change)="changeFun($event)" >
+<br><br>
+<input type="text" (keypress)="onKeypressEvent($event)" />

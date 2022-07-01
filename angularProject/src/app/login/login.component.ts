@@ -31,11 +31,19 @@ export class LoginComponent implements OnInit {
   }
   
   getData2(newName2:any){
-    this.name = newName2;
-    console.log('this.name',this.name);
+
+    // console.log('this.name', newName2.target.value);
+
+    this.name = newName2
+     console.log('this.name',this.name);
    
   }
+  onKeypressEvent(eventwwww: any){
+    console.log(eventwwww.target.value);
+  }
 
-
+  changeFun(data:any){
+    console.log(data.target.value)
+  }
 
 }
