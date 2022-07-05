@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
+import { PopupdataService } from '../popup/popupdata.service';
 import { StorageService } from '../storage.service';
 
 @Component({
@@ -9,7 +11,8 @@ import { StorageService } from '../storage.service';
 export class LoginComponent implements OnInit {
     name:any;
     surname:string = 'patil';
-  constructor(private dataService:StorageService) { }
+  constructor(private dataService:StorageService, private dService : DataService,
+    public  popupdataService:PopupdataService) { }
 
   ngOnInit(): void {
    this.name='jay';
@@ -18,6 +21,10 @@ export class LoginComponent implements OnInit {
    console.log('name',this.name);
    console.log('surname',this.surname);
    console.log('login component',this.dataService.serviceData);
+   console.log('logincompostorageData', this.dService.storageData);
+   console.log('loginCompoFunct', this.dService.dataServiceFunction());
+   console.log('loginCompo', this.dService.cars);
+   console.log(this.popupdataService.colors);
    
    
   }
@@ -53,6 +60,7 @@ export class LoginComponent implements OnInit {
     console.log('buttonClick',this.dataService.serviceData);
     this.dataService.data(this.dataService.serviceData);
     this.dataService.setdata(this.dataService.newData = 2000)
+   console.log('colors', this.popupdataService.colors);
     
   }
 
