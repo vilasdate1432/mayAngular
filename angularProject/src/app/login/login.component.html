@@ -7,4 +7,20 @@
 <input type="text"  (change)="changeFun($event)" >
 <br><br>
 <input type="text" (keypress)="onKeypressEvent($event)" />
+<br>
 <button (click)="getServiceData()">serviceData</button>
+<br>
+<br>
+<h1>{{surname}}</h1>
+<p>{{getInterpolation()}}</p>
+<h2>{{xyz}}</h2><br>
+<h2>{{xyz == 1000}}</h2><br><!--we can use equality operator . It will return true or false-->
+<h2>{{xyz - 500 }}</h2> <!-- we can apply Arithmatic operations in interpolation -->
+<!-- <h2>{{xyz -- }}</h2> We cannot apply increment or decrement in interpolation 
+ <h2>{{typeof xyz}}</h2>   We cannot apply typeof operator in intp
+ <h2>{{xyz = 500 }}</h2>   We cannot apply Assigment optr-->
+<br>
+<input type="text" #inBox (keyup)="getInboxValue(inBox.value)" value = 'poonam.....'><br>
+<input type="text" [value]="interpolationProp" ><br>
+<input type="text" value = {{myName}}><br>
+<input type="text" value = 'myName'>

@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class PopupdataService {
  colors:any = ['pink','red','blue','black','white'];
- data= 10000;
- names= {
+ data = 10000;
+ names = {
   "FN":'pooja','LN':"Patil"
  }
 

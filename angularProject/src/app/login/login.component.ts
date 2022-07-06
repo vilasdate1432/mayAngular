@@ -11,6 +11,10 @@ import { StorageService } from '../storage.service';
 export class LoginComponent implements OnInit {
     name:any;
     surname:string = 'patil';
+    interpolationProp = 'I am Inside Interpolation Function';
+    xyz = 1000;
+    myName = 'poonam';
+ 
   constructor(private dataService:StorageService, private dService : DataService,
     public  popupdataService:PopupdataService) { }
 
@@ -25,9 +29,19 @@ export class LoginComponent implements OnInit {
    console.log('loginCompoFunct', this.dService.dataServiceFunction());
    console.log('loginCompo', this.dService.cars);
    console.log(this.popupdataService.colors);
+   console.log(typeof this.xyz);
    
    
   }
+  getInboxValue(value:any){
+    console.log('value',value);
+    
+  }
+
+  getInterpolation(){
+    return this.interpolationProp;
+  }
+
 
   getData(newName:any){
     var name = 'poonam';
