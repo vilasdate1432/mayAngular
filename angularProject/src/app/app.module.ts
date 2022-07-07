@@ -9,6 +9,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { PopupComponent } from './popup/popup/popup.component';
 import { Popup2Component } from './popup/popup2/popup2.component';
 import { UserModule } from './user/user.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { UserModule } from './user/user.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UserModule
+    UserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

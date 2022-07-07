@@ -14,6 +14,9 @@ export class LoginComponent implements OnInit {
     interpolationProp = 'I am Inside Interpolation Function';
     xyz = 1000;
     myName = 'poonam';
+    disableName = "jay";
+    disableFlag = true;
+    ngName = 'I like active';
  
   constructor(private dataService:StorageService, private dService : DataService,
     public  popupdataService:PopupdataService) { }
@@ -42,6 +45,12 @@ export class LoginComponent implements OnInit {
     return this.interpolationProp;
   }
 
+  buttonClick(event:any){
+    alert('click event occured')
+  }
+  enableInputBox(){
+    this.disableFlag = false;
+  }
 
   getData(newName:any){
     var name = 'poonam';
