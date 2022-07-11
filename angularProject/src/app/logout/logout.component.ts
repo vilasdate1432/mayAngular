@@ -9,6 +9,26 @@ import { StorageService } from '../storage.service';
 })
 export class LogoutComponent implements OnInit {
      data:any;
+     hide =false;
+     colors= ['red','orange','green','yellow','aqua','blue'];
+     info = {
+       myInfo: {
+      name: 'poonam',
+      age: 30,
+      city: 'mumbai',
+      phNo: 777777
+      },
+      myInfo2: {
+      name: 'poonam2',
+      age: 30,
+      city: 'mumbai2',
+      phNo: 7777772
+     }
+  }
+   car:any = 'i10';
+   colorOf = 'yellow'
+
+
   constructor(private serviceStorage:StorageService) { }
 
   ngOnInit(): void {

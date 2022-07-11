@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
     myName = 'poonam';
     disableName = "jay";
     disableFlag = true;
-    ngName = 'I like active';
+    ngName = 50000;
  
   constructor(private dataService:StorageService, private dService : DataService,
     public  popupdataService:PopupdataService) { }
@@ -33,9 +33,12 @@ export class LoginComponent implements OnInit {
    console.log('loginCompo', this.dService.cars);
    console.log(this.popupdataService.colors);
    console.log(typeof this.xyz);
+   this.dService.storageData = 'i like pune';
+   console.log('updatedProp', this.dService.storageData);
    
    
   }
+
   getInboxValue(value:any){
     console.log('value',value);
     
@@ -43,6 +46,7 @@ export class LoginComponent implements OnInit {
 
   getInterpolation(){
     return this.interpolationProp;
+   
   }
 
   buttonClick(event:any){
